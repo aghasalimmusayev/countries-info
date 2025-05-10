@@ -16,7 +16,7 @@ nav{
   top: 0;
   width: 100%;
   background-color: var(--bg_color);
-  transition: .3s;
+  /* transition: .3s; */
   z-index: 999;
 }
 .navlinks{
@@ -53,10 +53,13 @@ nav{
   display: block;
   width: fit-content;
   margin: 8px auto;
+  padding: 7px 0;
   text-decoration: none;
   font: 450 1.1rem "Roboto", sans-serif;
   color: var(--txt_color);
   text-align: center;
+  border-bottom: 3px solid transparent;
+  transition: .4s;
 }
 .reg_links{list-style: none;}
 
@@ -76,5 +79,6 @@ nav{
     gap: 20px;
   }
   .navlinks li{width: fit-content;}
+  .navlinks a:hover{border-color: var(--txt_color);}
 }
 

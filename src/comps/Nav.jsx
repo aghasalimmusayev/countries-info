@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Toggle from "../comps/Toggle.jsx"
+import ToggleDark from "../comps/ToggleDark.jsx"
 import MenuToggle from "../comps/MenuToggle.jsx"
 import "../CSS/nav.css"
 
@@ -12,7 +12,7 @@ function Nav({ countries, setSelectedRegion, selectedRegion }) {
         setRegions(allRegions);
     }, [countries])
 
-    let showAllCountries = function(){
+    let showAllCountries = function () {
         setSelectedRegion("");
         window.location.hash = "";
     }
@@ -33,7 +33,7 @@ function Nav({ countries, setSelectedRegion, selectedRegion }) {
                     ))
                     }
                 </ul>
-                <Toggle />
+                <ToggleDark />
                 <div className="toggle_box">
                     <MenuToggle />
                 </div>

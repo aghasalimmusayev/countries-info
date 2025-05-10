@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 
-const Toggle = () => {
+const ToggleDark = () => {
 
   let [darkmode, setDarkMode] = useState(false)
 
@@ -9,9 +9,9 @@ const Toggle = () => {
     setDarkMode(prevMode => !prevMode);
   }
   
-  useEffect(()=> {
+  // useEffect(()=> {
     darkmode ? document.body.classList.add("dark") : document.body.classList.remove("dark");
-  }, [darkmode]);
+  // }, [darkmode]);
 
   return (
     <StyledWrapper>
@@ -350,4 +350,4 @@ const StyledWrapper = styled.div`
     }
   }`;
 
-export default Toggle;
+export default ToggleDark;
