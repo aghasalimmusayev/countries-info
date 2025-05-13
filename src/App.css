@@ -3,11 +3,16 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  background-color: #F5F8FA;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #2D3748;
+  transition: all 0.3s;
 }
 .container {
   width: 90%;
   margin: auto;
 }
+body.dark {background-color: #1e283a;}
 @media (min-width: 768px) {
   .container {
     max-width: 1200px;
