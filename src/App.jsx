@@ -2,15 +2,15 @@ import { useState, useEffect } from "react"
 import getData from "./JS/service.js"
 import Header from "./comps/Header.jsx"
 import Main from "./comps/Main.jsx"
+import Details from "./comps/Details.jsx"
 import './App.css'
-
-
 
 function App() {
 
   let [countries, setCountries] = useState([]);
   let [selectedRegion, setSelectedRegion] = useState("");
   let [filteredCountries, setFilteredCountries] = useState([]);
+  let [selectedCountry, setSelectedCountry] = useState(null);
 
   useEffect(() => {
     let fetchData = async () => {
@@ -41,10 +41,14 @@ function App() {
     <>
       <Header
         countries={countries}
-        setSelectedRegion={setSelectedRegion}
         selectedRegion={selectedRegion}
+        setSelectedRegion={setSelectedRegion}
+        setSelectedCountry={setSelectedCountry}
       />
-      <Main filteredCountries={filteredCountries} />
+      {selectedCountry
+        ? <Details setSelectedCountry={setSelectedCountry} country={selectedCountry} />
+        : <Main filteredCountries={filteredCountries} setSelectedCountry={setSelectedCountry} />
+      }
     </>
   )
 }

@@ -1,12 +1,13 @@
 import Nav from "./Nav.jsx"
 
-function Header({ countries, setSelectedRegion, selectedRegion }) {
+function Header({ countries, setSelectedRegion, selectedRegion, setSelectedCountry }) {
     return (
         <header>
             <Nav
                 countries={countries}
-                setSelectedRegion={setSelectedRegion}
                 selectedRegion={selectedRegion}
+                setSelectedRegion={setSelectedRegion}
+                setSelectedCountry={setSelectedCountry}
             />
         </header>
     )

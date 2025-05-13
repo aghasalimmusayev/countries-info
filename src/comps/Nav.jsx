@@ -3,7 +3,7 @@ import ToggleDark from "../comps/ToggleDark.jsx"
 import MenuToggle from "../comps/MenuToggle.jsx"
 import "../CSS/nav.css"
 
-function Nav({ countries, setSelectedRegion, selectedRegion }) {
+function Nav({ countries, setSelectedRegion, selectedRegion, setSelectedCountry }) {
 
     let [regions, setRegions] = useState([]);
 
@@ -14,6 +14,7 @@ function Nav({ countries, setSelectedRegion, selectedRegion }) {
 
     let showAllCountries = function () {
         setSelectedRegion("");
+        setSelectedCountry(null);
         window.location.hash = "";
     }
 
@@ -25,7 +26,7 @@ function Nav({ countries, setSelectedRegion, selectedRegion }) {
                     {regions.map((reg, index) => (
                         <li key={index}>
                             <a href={`#${reg}`}
-                                onClick={() => setSelectedRegion(reg)}
+                                onClick={() => {setSelectedCountry(null); setSelectedRegion(reg);}}
                                 className={selectedRegion === reg ? "active" : ""}>
                                 {reg}
                             </a>

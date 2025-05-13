@@ -1,11 +1,11 @@
 import Countries from "./Countries.jsx"
 import "../CSS/main.css"
 
-function Main({ filteredCountries}) {
+function Main({ filteredCountries, setSelectedCountry}) {
     return (
         <main>
             <div className="container">
-                <Countries filteredCountries={filteredCountries} />
+                <Countries filteredCountries={filteredCountries} setSelectedCountry={setSelectedCountry}/>
             </div>
         </main>
     )

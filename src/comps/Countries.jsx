@@ -1,11 +1,11 @@
 import React from "react";
 import "../CSS/countries.css"
 
-function Countries({ filteredCountries }) {
+function Countries({ filteredCountries, setSelectedCountry }) {
   return (
     <div className="countries">
       {filteredCountries.map((country, index) => (
-        <div key={index} className="country-card">
+        <div key={index} className="country-card" onClick={() => setSelectedCountry(country)}>
           <div>
             <img src={country.flags?.png} alt="flag" />
           </div>
