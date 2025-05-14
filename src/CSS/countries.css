@@ -107,33 +107,16 @@ body.dark {
   justify-content: space-between;
   margin: 0 1.25rem;
 }
-
-.pop-area p {
-  flex: 1;
-  padding: 0.5rem 0;
-}
-
-.country-card .capital {
-  font-weight: 500;
-}
-
-.country-card .population {
-  text-align: right;
-  font-weight: 500;
-}
-
+.pop-area p {padding: 0.5rem 0;}
+.country-card .capital {font-weight: 500;}
+.country-card .population, .country-card .area {font-weight: 500;}
 .country-card .currency {
   background-color: var(--bg2_color);
   border-radius: 6px;
   padding: 0.5rem 1.25rem;
   margin: 0.5rem 1.25rem 1rem;
 }
-
-.country-card .area {
-  margin-bottom: 0.5rem;
-}
-
-/* Label styling */
+.country-card .area {margin-bottom: 0.5rem;}
 .country-card p::before {
   content: attr(class);
   text-transform: capitalize;

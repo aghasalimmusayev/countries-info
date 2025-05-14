@@ -11,11 +11,11 @@ function Countries({ filteredCountries, setSelectedCountry }) {
           </div>
           <h3>{country.name}</h3>
           <p className="region">Region: {country.region}</p>
+          <p className="capital">Capital: {country.capital}</p>
           <div className="pop-area">
-            <p className="capital">Capital: {country.capital}</p>
-            <p className="population">Population: {country.population.toLocaleString()}</p>
+            <p className="area">Area: {country.area}</p>
+            <p className="population">Population: {country.population}</p>
           </div>
-          <p className="area">Area: {country.area}</p>
           <p className="currency">Currency: {country.currencies?.[0]?.code || "N/A"}</p>
         </div>
       ))}

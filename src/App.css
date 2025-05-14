@@ -3,7 +3,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  background-color: #F5F8FA;
+  background-color: #E5E7EB;
   transition: background-color 0.3s ease, color 0.3s ease;
   color: #2D3748;
   transition: all 0.3s;

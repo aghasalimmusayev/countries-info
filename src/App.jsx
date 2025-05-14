@@ -11,6 +11,7 @@ function App() {
   let [selectedRegion, setSelectedRegion] = useState("");
   let [filteredCountries, setFilteredCountries] = useState([]);
   let [selectedCountry, setSelectedCountry] = useState(null);
+  let [searchFiltered, setSearchFiltered] = useState([]);
 
   useEffect(() => {
     let fetchData = async () => {
@@ -32,10 +33,16 @@ function App() {
         countries.filter((country) => country.region === selectedRegion)
       );
     }
+    else if (searchFiltered) {
+      let result = countries.filter((country) =>
+        country.name.toLowerCase().includes(searchFiltered.toLowerCase())
+      );
+      setFilteredCountries(result);
+    }
     else {
       setFilteredCountries(countries);
     }
-  }, [selectedRegion, countries]);
+  }, [selectedRegion, countries, searchFiltered]);
 
   return (
     <>
@@ -44,10 +51,15 @@ function App() {
         selectedRegion={selectedRegion}
         setSelectedRegion={setSelectedRegion}
         setSelectedCountry={setSelectedCountry}
+        searchFiltered={searchFiltered}
+        setSearchFiltered={setSearchFiltered}
       />
       {selectedCountry
         ? <Details setSelectedCountry={setSelectedCountry} country={selectedCountry} />
-        : <Main filteredCountries={filteredCountries} setSelectedCountry={setSelectedCountry} />
+        : <Main
+          filteredCountries={filteredCountries}
+          setSelectedCountry={setSelectedCountry}
+        />
       }
     </>
   )
