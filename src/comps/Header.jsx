@@ -20,8 +20,8 @@ function Header({ countries, filteredCountries, setSelectedRegion, selectedRegio
                         searchFiltered={searchFiltered}
                         setSearchFiltered={setSearchFiltered}
                     />
+                    <RandCountry filteredCountries={filteredCountries} setSelectedCountry={setSelectedCountry} />
                 </div>
-                <RandCountry filteredCountries={filteredCountries} setSelectedCountry={setSelectedCountry}/>
             </div>
         </header>
     )
