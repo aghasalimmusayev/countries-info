@@ -48,6 +48,7 @@ function App() {
     <>
       <Header
         countries={countries}
+        filteredCountries={filteredCountries}
         selectedRegion={selectedRegion}
         setSelectedRegion={setSelectedRegion}
         setSelectedCountry={setSelectedCountry}
