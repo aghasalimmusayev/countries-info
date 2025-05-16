@@ -12,10 +12,6 @@ function Search({searchFiltered, setSearchFiltered}) {
     return (
         <div className='container'>
             <div className="search_content">
-                <div className="search_btns">
-                    <button className='look'>have a look</button>
-                    <button className='search'>search</button>
-                </div>
                 <div className="search_inp">
                     <input
                         type="text" placeholder='Search country'
