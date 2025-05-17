@@ -6,6 +6,14 @@
     --txt-color2: #333;
     --txt-color3: #8B5CF6;
 }
+body.dark{
+    --bg-color: #6D28D9;
+    --bg-color2: #fff;
+    --bg-color3: #1F1F1F;
+    --txt-color: #1F1F1F;
+    --txt-color2: #F3F4F6;
+    --txt-color3: #A78BFA;
+}
 .header_content{
     display: flex;
     flex-direction: column;

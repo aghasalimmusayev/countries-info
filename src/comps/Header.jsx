@@ -8,8 +8,8 @@ function Header({ countries, filteredCountries, setSelectedRegion, selectedRegio
 
     let [searchShow, setSearchShow] = useState(false)
 
-    function handleSearchInp() { //! Dovre girir, problem var
-        setSearchShow(false)
+    function handleSearchInp() {
+        setSearchShow(!searchShow)
     }
 
     return (

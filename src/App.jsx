@@ -11,7 +11,7 @@ function App() {
   let [selectedRegion, setSelectedRegion] = useState("");
   let [filteredCountries, setFilteredCountries] = useState([]);
   let [selectedCountry, setSelectedCountry] = useState(null);
-  let [searchFiltered, setSearchFiltered] = useState([]);
+  let [searchFiltered, setSearchFiltered] = useState("");
 
   useEffect(() => {
     let fetchData = async () => {
